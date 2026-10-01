@@ -1,0 +1,172 @@
+/* ---------- Reset & base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background: #f2f4f8;
+}
+
+/* ---------- Header ---------- */
+header {
+  background: #2c3e50;
+  color: #fff;
+  text-align: center;
+  padding: 32px 16px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+/* ---------- Navigation (Flexbox) ---------- */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 16px;
+  background: #34495e;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  background: #fff;
+  color: #2c3e50;
+}
+
+/* ---------- Main & sections ---------- */
+main {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+section {
+  background: #fff;
+  padding: 24px;
+  margin-bottom: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- Features list (Grid cards) ---------- */
+ul.features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+ul.features li {
+  background: #eaf2fb;
+  border: 1px solid #c5d8ee;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+}
+
+/* ---------- Shortcuts table ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+th {
+  background: #2c3e50;
+  color: #fff;
+}
+
+/* ---------- Feedback form ---------- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font: inherit;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  outline: 2px solid #3498db;
+  border-color: #3498db;
+}
+
+/* ---------- Buttons ---------- */
+button,
+input[type="submit"] {
+  padding: 10px 20px;
+  font: inherit;
+  color: #fff;
+  background: #3498db;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background: #217dbb;
+  transform: translateY(-2px);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 16px;
+  color: #555;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 600px) {
+  header {
+    padding: 16px 8px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav {
+    flex-wrap: wrap;
+  }
+}
